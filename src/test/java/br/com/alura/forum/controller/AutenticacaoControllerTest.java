@@ -25,7 +25,7 @@ public class AutenticacaoControllerTest {
 
 	@Test
 	public void deveriaDevolver400CasoDadosDeAutenticacaoEstejamIncorretos() throws Exception {
-		URI uri = new URI("/auth");
+		URI uri = new URI("/auth") ;
 		String json = "{\"email\":\"invalido@email.com\",\"senha\":\"123456}\"";
 
 		mockMvc.perform(MockMvcRequestBuilders.post(uri).content(json).contentType(MediaType.APPLICATION_JSON))
